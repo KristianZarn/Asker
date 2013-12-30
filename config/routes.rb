@@ -1,4 +1,10 @@
 AskerRuby::Application.routes.draw do
+  resources :users
+  resources :questions
+  resources :sessions, only: [:new, :create, :destroy]
+
+  root 'questions#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
