@@ -1,0 +1,68 @@
+<% provide(:title, 'Sign in') %>
+
+<script>enablejs_signin()</script>
+
+<div id="signIn" class="frame">
+  <p class="frameHead">Sign in</p>
+  <form id="signInForm" action="#">
+    <p class="frameLabel">
+      <label for="email_1">Email:</label>
+      <input class="inputField" type="text" name="email" id="email_1">
+      <span class="formError">*Enter a valid email address.</span>
+    </p>
+    <p class="frameLabel">
+      <label for="pass_1">Password:</label>
+      <input class="inputField" type="password" name="pass" id="pass_1">
+      <span class="formError">*Enter your password.</span>
+    </p>
+    <p class="buttonPos">
+      <input class="submit" type = "submit" value = "Sign in" id="signInButt" />
+      <span class="formError loginError"></span>
+    </p>
+  </form>
+</div>
+
+<div id="createAccount" class="frame">
+  <p class="frameHead">Create new account</p>
+  <form id="createAccountForm" action="#">
+    <p class="frameLabel">
+      <label for="email_2">Email:</label>
+      <input class="inputField" type="text" name="email" id="email_2">
+      <span class="formError">*Enter a valid email address.</span>
+    </p>
+    <p class="frameLabel">
+      <label for="dispName">Displayed Name:</label>
+      <input class="inputField" type="text" name="dispName" id="dispName">
+      <span class="formError">*Displayed name is required.</span>
+    </p>
+    <p class="frameLabel">
+      <label for="firstName">First Name:</label>
+      <input class="inputField" type="text" name="firstName" id="firstName">
+      <span class="formError">*First name is required.</span>
+    </p>
+    <p class="frameLabel">
+      <label for="lastName">Last Name:</label>
+      <input class="inputField" type="text" name="lastName" id="lastName">
+      <span class="formError">*Last name is required.</span>
+    </p>
+    <p class="frameLabel">
+      <label for="pass_2">Password:</label>
+      <input class="inputField" type="password" name="pass" id="pass_2">
+      <span class="formError">*Minimum length of 6.</span>
+    </p>
+    <p class="frameLabel">
+      <label for="passConfirm">Confirm Password:</label>
+      <input class="inputField" type="password" name="passConfirm" id="passConfirm">
+      <span class="formError">*Passwords don't match.</span>
+    </p>
+    <p class="frameLabel">
+      <input type="checkbox" name="terms" value="true" id="terms">
+      <label for="terms">I agree to the terms and conditions.</label>
+      <span class="formError termsError">*You have to agree to the terms and conditions.</span>
+    </p>
+    <p class="buttonPos">
+      <input class="submit" type = "submit" value = "Create Account" id="CreateButt" />
+      <span class="formError loginError"></span>
+    </p>
+  </form>
+</div>

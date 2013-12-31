@@ -1,2 +1,49 @@
-<h1>Questions#index</h1>
-<p>Find me in app/views/questions/index.html.erb</p>
+<% provide(:title, 'Questions') %>
+
+<script>enablejs_questions()</script>
+
+<div id="overlay">
+  <div id="wrapQuestionForm">
+    <%= image_tag "close.png", id: "closeImg" %>
+    <p class="formText">What would you like to know?</p>
+    <form id="questionForm" action="#" method="post">
+      <p class="formLabel">
+        <label for="formTitle">Title:</label>
+        <input class="inputBorder" type="text" name="formTitle" id="formTitle">
+        <span class="formError">*Title is required.</span>
+      </p>
+      <p class="formLabel">
+        <label for="formQuestion">Question:</label>
+        <textarea class="inputBorder" name="formQuestion" id="formQuestion"></textarea>
+        <span class="formError">*Question is required.</span>
+      </p>
+      <p class="submitPos">
+        <input type="submit" value="Submit" name="formSubmit" id="formSubmit" >
+      </p>
+    </form>
+  </div>
+</div>
+
+<div id="wrapLeft">
+  <nav>
+    <ul>
+      <li><%= link_to "NEWEST", root_path, class: "subnav" %></li>
+      <li><%= link_to "VOTES", root_path, class: "subnav" %></li>
+      <li><%= link_to "UNANSWERED", root_path, class: "subnav" %></li>
+    </ul>
+  </nav>
+
+  <div id="questions">
+
+  </div>
+
+  <div id="pager">
+
+  </div>
+</div>
+
+<div id="wrapRight">
+  <div id="askQuestion">
+    <p>Ask Question</p>
+  </div>
+</div>
