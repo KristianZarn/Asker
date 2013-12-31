@@ -24,45 +24,45 @@
 
 <div id="createAccount" class="frame">
   <p class="frameHead">Create new account</p>
-  <form id="createAccountForm" action="#">
+
+  <%= form_for(@user, html: {id: "createAccountForm"}) do |f| %>
     <p class="frameLabel">
-      <label for="email_2">Email:</label>
-      <input class="inputField" type="text" name="email" id="email_2">
+      <%= f.label :email, "Email:" %>
+      <%= f.text_field :email, class: "inputField" %>
       <span class="formError">*Enter a valid email address.</span>
     </p>
     <p class="frameLabel">
-      <label for="dispName">Displayed Name:</label>
-      <input class="inputField" type="text" name="dispName" id="dispName">
+      <%= f.label :dispname, "Displayed Name:" %>
+      <%= f.text_field :dispname, class: "inputField" %>
       <span class="formError">*Displayed name is required.</span>
     </p>
     <p class="frameLabel">
-      <label for="firstName">First Name:</label>
-      <input class="inputField" type="text" name="firstName" id="firstName">
+      <%= f.label :firstname, "First Name:" %>
+      <%= f.text_field :firstname, class: "inputField" %>
       <span class="formError">*First name is required.</span>
     </p>
     <p class="frameLabel">
-      <label for="lastName">Last Name:</label>
-      <input class="inputField" type="text" name="lastName" id="lastName">
+      <%= f.label :lastname, "Last Name:" %>
+      <%= f.text_field :lastname, class: "inputField" %>
       <span class="formError">*Last name is required.</span>
     </p>
     <p class="frameLabel">
-      <label for="pass_2">Password:</label>
-      <input class="inputField" type="password" name="pass" id="pass_2">
+      <%= f.label :password, "Password:" %>
+      <%= f.password_field :password, class: "inputField" %>
       <span class="formError">*Minimum length of 6.</span>
     </p>
     <p class="frameLabel">
-      <label for="passConfirm">Confirm Password:</label>
-      <input class="inputField" type="password" name="passConfirm" id="passConfirm">
+      <%= f.label :password_confirmation, "Confirm Password:" %>
+      <%= f.password_field :password_confirmation, class: "inputField" %>
       <span class="formError">*Passwords don't match.</span>
     </p>
     <p class="frameLabel">
-      <input type="checkbox" name="terms" value="true" id="terms">
-      <label for="terms">I agree to the terms and conditions.</label>
+      <%= check_box_tag :terms %>
+      <%= label_tag :terms, "I agree to the terms and conditions." %>
       <span class="formError termsError">*You have to agree to the terms and conditions.</span>
     </p>
     <p class="buttonPos">
-      <input class="submit" type = "submit" value = "Create Account" id="CreateButt" />
-      <span class="formError loginError"></span>
+      <%= f.submit "Create my account", id: "CreateButt", class: "submit" %>
     </p>
-  </form>
+  <% end %>
 </div>

@@ -85,23 +85,23 @@ function enablejs_signin() {
         }); //end submit
 
         // create account validate on blur
-        $("#email_2").blur(function() {
+        $("#user_email").blur(function() {
             validEmail($(this));
         });
-        $("#dispName").blur(function() {
+        $("#user_dispname").blur(function() {
             notEmpty($(this));
         });
-        $("#firstName").blur(function() {
+        $("#user_firstname").blur(function() {
             notEmpty($(this));
         });
-        $("#lastName").blur(function() {
+        $("#user_lastname").blur(function() {
             notEmpty($(this));
         });
-        $("#pass_2").blur(function() {
+        $("#user_password").blur(function() {
             validNewPass($(this));
         });
-        $("#passConfirm").blur(function() {
-            validConfirmPass($(this), $("#pass_2"));
+        $("#user_password_confirmation").blur(function() {
+            validConfirmPass($(this), $("#user_password"));
         });
         $("#terms").click(function() {
             isChecked($(this));
@@ -110,12 +110,12 @@ function enablejs_signin() {
         // create account validate on submit
         $("#createAccountForm").submit(function() {
             var valid = true;
-            valid = validEmail($("#email_2")) && valid;
-            valid = notEmpty($("#dispName")) && valid;
-            valid = notEmpty($("#firstName")) && valid;
-            valid = notEmpty($("#lastName")) && valid;
-            valid = validNewPass($("#pass_2")) && valid;
-            valid = validConfirmPass($("#passConfirm"), $("#pass_2")) && valid;
+            valid = validEmail($("#user_email")) && valid;
+            valid = notEmpty($("#user_dispname")) && valid;
+            valid = notEmpty($("#user_firstname")) && valid;
+            valid = notEmpty($("#user_lastname")) && valid;
+            valid = validNewPass($("#user_password")) && valid;
+            valid = validConfirmPass($("#user_password_confirmation"), $("#user_password")) && valid;
             valid = isChecked($("#terms")) && valid;
 
             if (!valid) {
