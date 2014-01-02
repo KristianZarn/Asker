@@ -4,28 +4,27 @@
 
 <div id="signIn" class="frame">
   <p class="frameHead">Sign in</p>
-  <form id="signInForm" action="#">
+  <%= form_for(:session, url: sessions_path, html: {id: "signInForm"}) do |f| %>
     <p class="frameLabel">
-      <label for="email_1">Email:</label>
-      <input class="inputField" type="text" name="email" id="email_1">
+      <%= f.label :email, "Email:" %>
+      <%= f.text_field :email, class: "inputField" %>
       <span class="formError">*Enter a valid email address.</span>
     </p>
     <p class="frameLabel">
-      <label for="pass_1">Password:</label>
-      <input class="inputField" type="password" name="pass" id="pass_1">
+      <%= f.label :password, "Password:" %>
+      <%= f.password_field :password, class: "inputField" %>
       <span class="formError">*Enter your password.</span>
     </p>
     <p class="buttonPos">
-      <input class="submit" type = "submit" value = "Sign in" id="signInButt" />
-      <span class="formError loginError"></span>
+      <%= f.submit "Sign in", id: "signInButt", class: "submit" %>
     </p>
-  </form>
+  <% end %>
 </div>
 
 <div id="createAccount" class="frame">
   <p class="frameHead">Create new account</p>
 
-  <%= form_for(@user, html: {id: "createAccountForm"}) do |f| %>
+  <%= form_for(:user, url: users_path, html: {id: "createAccountForm"}) do |f| %>
     <p class="frameLabel">
       <%= f.label :email, "Email:" %>
       <%= f.text_field :email, class: "inputField" %>

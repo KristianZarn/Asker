@@ -66,18 +66,18 @@ function enablejs_signin() {
         $(".formError").hide();
 
         // sign in validate on blur
-        $("#email_1").blur(function() {
+        $("#session_email").blur(function() {
             validEmail($(this));
         });
-        $("#pass_1").blur(function() {
+        $("#session_password").blur(function() {
             notEmpty($(this));
         });
 
         // sign in validate on submit
         $("#signInForm").submit(function() {
             var valid = true;
-            valid = validEmail($("#email_1")) && valid;
-            valid = notEmpty($("#pass_1")) && valid;
+            valid = validEmail($("#session_email")) && valid;
+            valid = notEmpty($("#session_password")) && valid;
 
             if (!valid) {
                 return false;
