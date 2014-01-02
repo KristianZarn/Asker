@@ -28,6 +28,14 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+  def self.search(search)
+    if search
+      where("dispname LIKE ?", "%#{search}%")
+    else
+      all
+    end
+  end
+
   private
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64

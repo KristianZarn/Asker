@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
-  def index
+  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :correct_user, only: [:edit, :update]
 
+  def index
+    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 9)
   end
 
   def show
@@ -23,5 +26,14 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:email, :dispname, :firstname, :lastname, :password, :password_confirmation)
+  end
+
+  def signed_in_user
+    redirect_to signin_path unless signed_in?
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_user?(@user)
   end
 end

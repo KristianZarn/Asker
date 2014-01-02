@@ -1,20 +1,27 @@
 <% provide(:title, 'Users') %>
 
-<div id="search">
-  <form action="#" method="get">
+<div id="searchFrame">
+  <%= form_tag users_path, method: 'get' do %>
     <p class="findUsers">
-      <label for="searchBox">Find Users:</label>
-      <input class="inputBorder" type="text" name="searchBox" id="searchBox">
+      <%= label_tag :search, "Find Users:" %>
+      <%= text_field_tag :search, params[:search], class: "inputBorder" %>
     </p>
 
-    <input class="submit" type = "submit" value = "Go" id="goButton" />
-  </form>
+    <%= submit_tag "Go", name: nil, id: "goButton", class: "submit" %>
+  <% end %>
 </div>
 
 <div id="allUsers">
-
+  <% @users.each do |user| %>
+    <div class="userFrame">
+      <%= image_tag("profile_pic.png") %>
+      <p>
+        <%= link_to user.dispname, user, class: "userLink" %>
+      </p>
+      <p><%= "#{user.firstname} #{user.lastname}" %></p>
+      <p><%= "#{user.email}" %></p>
+    </div>
+  <% end %>
 </div>
 
-<div id="pager">
-
-</div>
+<%= will_paginate @users, previous_label: "&#x25C0", next_label: "&#x25B6" %>

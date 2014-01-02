@@ -1,0 +1,16 @@
+.inputBorder {
+    border: 1px solid #CACACA;
+    border-radius: 3px;
+}
+
+.inputBorder:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 2px #9ecaed;
+}
+
+.inputBorderRed {
+    outline: none;
+    border-color: #DE6464;
+    box-shadow: 0 0 2px #DE6464;
+}
