@@ -1,6 +1,7 @@
 AskerRuby::Application.routes.draw do
   resources :users
   resources :questions
+  resources :answers, only: [:create, :destroy]
   resources :sessions, only: [:create, :destroy]
 
   root 'questions#index'

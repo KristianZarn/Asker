@@ -11,6 +11,6 @@
 
 .inputBorderRed {
     outline: none;
-    border-color: #DE6464;
+    border-color: #DE6464 !important;
     box-shadow: 0 0 2px #DE6464;
 }

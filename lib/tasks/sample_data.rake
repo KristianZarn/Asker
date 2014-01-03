@@ -79,5 +79,6 @@ namespace :db do
                  lastname: "Klemenko",
                  password: "password",
                  password_confirmation: "password")
+
   end
 end

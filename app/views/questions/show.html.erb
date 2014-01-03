@@ -1,0 +1,52 @@
+<% provide(:title, @question.title) %>
+
+<script>enablejs_answers()</script>
+
+<div id="overlay">
+  <div id="wrapAnswerForm">
+    <%= image_tag "close.png", id: "closeImg" %>
+    <p class="formText">Share your knowledge.</p>
+
+    <%= form_for(:answer, url: answers_path, html: { id: "answerForm" }) do |f| %>
+      <%= hidden_field_tag "question_id", @question.id %>
+      <p class="formLabel">
+        <%= f.label :content, "Your answer:" %>
+        <%= f.text_area :content, class: "inputBorder" %>
+        <span class="formError">*Answer is required.</span>
+      </p>
+      <p class="submitPos">
+        <%= f.submit "Post answer", id: "formSubmit" %>
+      </p>
+    <% end %>
+  </div>
+</div>
+
+<p class="title"><%= @question.title %></p>
+<div class="questionFrame">
+  <div class="votes">
+    <%= image_tag('arrow_up.png', class: "arrowImg") %>
+    <p><%= @question.votes %></p>
+    <%= image_tag('arrow_down.png', class: "arrowImg") %>
+  </div>
+  <div class="frameContent">
+    <div class="mainText">
+      <% @question.content.split("\n").each do |str| %>
+        <p><%= str %></p>
+      <% end %>
+    </div>
+    <p class="author">
+      asked on <%= @question.created_at.strftime("%d.%m.%Y") %> by
+      <%= link_to @question.user.dispname, @question.user, class: "userLink" %>
+    </p>
+    <hr>
+  </div>
+</div>
+
+<div id="middle">
+  <p class="title"><%= pluralize(@question.answers.count, "answer") %></p>
+  <p id="addAnswer"><span lang="en" id="langAddAns">Add Answer</span></p>
+</div>
+
+<% @question.answers.each do |answer| %>
+
+<% end %>

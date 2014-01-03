@@ -1,0 +1,125 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.title {
+    clear: both;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 20px 0px;
+    float: left;
+    margin-left: 100px;
+}
+
+#addAnswer {
+    display: block;
+    width: 120px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #0078F0;
+    padding: 5px 0px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+#addAnswer:hover {
+    background-color: #3C9DFF;
+}
+
+
+.questionFrame {
+    clear: both;
+    display: block;
+    overflow: hidden;
+}
+
+.answerFrame {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.votes {
+    width: 100px;
+    float: left;
+}
+
+.arrowImg {
+    border: none;
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.pickAnswerImg {
+    border: none;
+    display: block;
+    width: 35px;
+    margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.votes p {
+    font-family: Verdana, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: #3894FF;
+}
+
+.frameContent {
+    width: 800px;
+    float: left;
+}
+
+.mainText p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.author {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+hr {
+    border: none;
+    border-top: 1px dotted #222;
+    color: #FFF;
+    background-color: #FFF;
+}
+
+/* popup panel for question */
+
+#wrapAnswerForm {
+    position: relative;
+    top: 10%;
+    width: 600px;
+    background: #FFF;
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid #000;
+}
+
+#answer_content {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 0.9em;
+    display: block;
+    resize: none;
+    width: 99%;
+    height: 300px;
+}

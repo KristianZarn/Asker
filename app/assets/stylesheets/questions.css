@@ -208,14 +208,14 @@
     margin-bottom: 10px;
 }
 
-#formTitle {
+#question_title {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 0.9em;
     display: block;
     width: 99%;
 }
 
-#formQuestion {
+#question_content {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 0.9em;
     display: block;

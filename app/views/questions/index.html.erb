@@ -6,40 +6,60 @@
   <div id="wrapQuestionForm">
     <%= image_tag "close.png", id: "closeImg" %>
     <p class="formText">What would you like to know?</p>
-    <form id="questionForm" action="#" method="post">
+    <%= form_for(:question, url: questions_path, html: { id: "questionForm" }) do |f| %>
       <p class="formLabel">
-        <label for="formTitle">Title:</label>
-        <input class="inputBorder" type="text" name="formTitle" id="formTitle">
+        <%= f.label :title, "Title:" %>
+        <%= f.text_field :title, class: "inputBorder" %>
         <span class="formError">*Title is required.</span>
       </p>
       <p class="formLabel">
-        <label for="formQuestion">Question:</label>
-        <textarea class="inputBorder" name="formQuestion" id="formQuestion"></textarea>
+        <%= f.label :content, "Question:" %>
+        <%= f.text_area :content, class: "inputBorder" %>
         <span class="formError">*Question is required.</span>
       </p>
       <p class="submitPos">
-        <input type="submit" value="Submit" name="formSubmit" id="formSubmit" >
+        <%= f.submit "Post Question", id: "formSubmit" %>
       </p>
-    </form>
+    <% end %>
   </div>
 </div>
 
 <div id="wrapLeft">
   <nav>
     <ul>
-      <li><%= link_to "NEWEST", root_path, class: "subnav" %></li>
-      <li><%= link_to "VOTES", root_path, class: "subnav" %></li>
-      <li><%= link_to "UNANSWERED", root_path, class: "subnav" %></li>
+      <li><%= link_to "NEWEST", root_path(order: "newest"), class: "subnav" %></li>
+      <li><%= link_to "VOTES", root_path(order: "votes"), class: "subnav" %></li>
+      <li><%= link_to "UNANSWERED", root_path(order: "unanswered"), class: "subnav" %></li>
     </ul>
   </nav>
 
   <div id="questions">
-
+    <% @questions.each do |question| %>
+      <div class="qSummary">
+        <div class="qStats">
+          <div class="qVotes">
+            <p class="number"><%= question.votes %></p> <!-- TODO: pluralize -->
+            <p class="label">votes</p>
+          </div>
+          <div class="qAnswers">
+            <p class="number">0</p>
+            <p class="label">answers</p> <!-- TODO: pluralize -->
+          </div>
+        </div>
+        <div class="qQuestion">
+          <%= link_to question.title, question, class: "qTitle" %>
+          <p class="qContent"><%= question.content[0..300] %>...</p>
+          <p class="qAuthor">
+            asked on <%= question.created_at.strftime("%d.%m.%Y") %> by
+            <%= link_to question.user.dispname, question.user, class: "userLink" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
   </div>
 
-  <div id="pager">
+  <%= will_paginate @questions, previous_label: "&#x25C0", next_label: "&#x25B6" %>
 
-  </div>
 </div>
 
 <div id="wrapRight">

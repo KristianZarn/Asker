@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140101234312) do
+ActiveRecord::Schema.define(version: 20140103144348) do
+
+  create_table "answers", force: true do |t|
+    t.text     "content"
+    t.integer  "votes",       default: 0
+    t.boolean  "selected",    default: false
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id"
+
+  create_table "questions", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "votes",      default: 0
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "questions", ["user_id", "created_at"], name: "index_questions_on_user_id_and_created_at"
 
   create_table "users", force: true do |t|
     t.string   "email"

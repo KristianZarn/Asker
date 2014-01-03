@@ -1,35 +1,34 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-function enablejs_questions() {
+function enablejs_answers() {
     $(document).ready(function() {
         // start with hidden window
-        $("#wrapQuestionForm").hide();
+        $("#wrapAnswerForm").hide();
         $(".formError").hide();
 
         // open dialog
-        $("#askQuestion").click(function() {
+        $("#addAnswer").click(function() {
             $("#overlay").css("z-index", "1");
-            $("#wrapQuestionForm").slideDown(250);
+            $("#wrapAnswerForm").slideDown(250);
         }); //end click
 
-        //close dialog
+        // close dialog
         $("#closeImg, #overlay").click(function() {
-            $("#wrapQuestionForm").slideUp(250,
+            $("#wrapAnswerForm").slideUp(250,
                 function() {
                     $("#overlay").css("z-index", "-1");
                 });
-            $("#question_title, #question_content").val("");
-            $("#question_title, #question_content").removeClass("inputBorderRed");
-            $("#question_title, #question_content").next(".formError").hide();
+            $("#answer_content").val("").removeClass("inputBorderRed");
+            $("#answer_content").next(".formError").hide();
         }); //end click
 
-        $("#wrapQuestionForm").click(function(evt) {
+        $("#wrapAnswerForm").click(function(evt) {
             evt.stopPropagation();
         }); //end click
 
         // validate on blur
-        $("#question_title, #question_content").blur(function() {
+        $("#answer_content").blur(function() {
             if ($(this).val() == "") {
                 $(this).addClass("inputBorderRed");
                 $(this).next(".formError").show();
@@ -40,15 +39,14 @@ function enablejs_questions() {
         }); //end blur
 
         // validate on submit
-        $("#questionForm").submit(function() {
+        $("#answerForm").submit(function() {
             var valid = true;
-            $("#question_title, #question_content").each(function() {
-                if ($(this).val() == "") {
-                    $(this).addClass("inputBorderRed");
-                    $(this).next(".formError").show();
-                    valid = false;
-                }
-            });
+            var $tmp = $("#answer_content");
+            if ($tmp.val() == "") {
+                $tmp.addClass("inputBorderRed");
+                $tmp.next(".formError").show();
+                valid = false;
+            }
 
             if (!valid) {
                 return false;
