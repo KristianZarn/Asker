@@ -38,12 +38,14 @@
       <div class="qSummary">
         <div class="qStats">
           <div class="qVotes">
-            <p class="number"><%= question.votes %></p> <!-- TODO: pluralize -->
-            <p class="label">votes</p>
+            <% str = pluralize(question.votes, "vote").split %>
+            <p class="number"><%= str[0] %></p>
+            <p class="label"><%= str[1] %></p>
           </div>
           <div class="qAnswers">
-            <p class="number">0</p>
-            <p class="label">answers</p> <!-- TODO: pluralize -->
+            <% str = pluralize(question.answers.count, "answer").split %>
+            <p class="number"><%= str[0] %></p>
+            <p class="label"><%= str[1] %></p>
           </div>
         </div>
         <div class="qQuestion">

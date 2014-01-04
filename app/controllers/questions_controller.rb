@@ -6,7 +6,8 @@ class QuestionsController < ApplicationController
     if params[:order] == "votes"
       @questions = Question.order(votes: :desc).paginate(page: params[:page], per_page: qpp)
     elsif params[:order] == "unanswered"
-      @questions = Question.paginate(page: params[:page], per_page: qpp) # TODO
+      @questions = Question.includes(:answers).group('questions.id').having('COUNT(answers.id) = 0').references(:answers)
+      @questions = @questions.order(created_at: :desc).paginate(page: params[:page], per_page: qpp)
     else
       @questions = Question.order(created_at: :desc).paginate(page: params[:page], per_page: qpp)
     end
@@ -14,6 +15,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @answers = @question.answers.order(votes: :desc)
   end
 
   def create

@@ -47,6 +47,24 @@
   <p id="addAnswer"><span lang="en" id="langAddAns">Add Answer</span></p>
 </div>
 
-<% @question.answers.each do |answer| %>
-
+<% @answers.each do |answer| %>
+  <div class="answerFrame">
+    <div class="votes">
+      <%= image_tag('arrow_up.png', class: "arrowImg") %>
+      <p><%= answer.votes %></p>
+      <%= image_tag('arrow_down.png', class: "arrowImg") %>
+    </div>
+    <div class="frameContent">
+      <div class="mainText">
+        <% answer.content.split("\n").each do |str| %>
+          <p><%= str %></p>
+        <% end %>
+      </div>
+      <p class="author">
+        answered on <%= answer.created_at.strftime("%d.%m.%Y") %> by
+        <%= link_to answer.user.dispname, answer.user, class: "userLink" %>
+      </p>
+      <hr>
+    </div>
+  </div>
 <% end %>
