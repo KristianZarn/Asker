@@ -53,6 +53,11 @@
       <%= image_tag('arrow_up.png', class: "arrowImg") %>
       <p><%= answer.votes %></p>
       <%= image_tag('arrow_down.png', class: "arrowImg") %>
+      <% if answer.selected %>
+        <%= image_tag('ok_green.png', class: "pickAnswerImg") %>
+      <% elsif current_user?(@question.user) %>
+        <%= link_to image_tag('ok_gray.png', class: "pickAnswerImg"), pick_path(answer_id: answer.id) %>
+      <% end %>
     </div>
     <div class="frameContent">
       <div class="mainText">

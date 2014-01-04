@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      redirect_to controller: :questions, action: :index
+      redirect_to @user
     else
       render 'new'
     end
@@ -28,4 +28,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :dispname, :firstname, :lastname, :password, :password_confirmation)
   end
 
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_user?(@user)
+  end
 end

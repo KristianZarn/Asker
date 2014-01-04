@@ -1,0 +1,63 @@
+#profile_user {
+    float: left;
+    width: 300px;
+    margin: 20px;
+}
+
+#profile_posts {
+    float: left;
+    width: 600px;
+    margin: 20px;
+}
+
+.profileTitle {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+#profile_posts .profileTitle {
+    margin-top: 10px;
+}
+
+#profile_user .profileTitle {
+    margin-left: 80px;
+}
+
+#profile_user img {
+    margin: 10px;
+    margin-left: 80px;
+}
+
+.profileText {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+.profileText a {
+    text-decoration: none;
+    color: #000;
+}
+
+#profile_posts .profileText a:hover {
+    text-decoration: underline;
+}
+
+.profileVotes {
+    padding: 0px 5px;
+    background-color: #c9f0bf;
+    color: #222222;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 35px;
+}
+
+.profileNote {
+    display: inline-block;
+    width: 80px;
+    color: #555;
+    font-size: 0.9em;
+}

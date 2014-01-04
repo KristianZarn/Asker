@@ -52,5 +52,14 @@ function enablejs_answers() {
                 return false;
             }
         }); //end submit
+
+        // pick answer hover
+        $(".pickAnswerImg[src='/assets/ok_gray.png']").hover(
+            function() {
+                $(this).attr("src", "/assets/ok_green.png");
+            },
+            function() {
+                $(this).attr("src", "/assets/ok_gray.png");
+        }); // end hover
     });
 }

@@ -1,6 +1,35 @@
 <% provide(:title, @user.dispname) %>
-<h1><%= @user.dispname %></h1>
-<p>
-  <%= @user.email %><br />
-  <%= "#{@user.firstname} #{@user.lastname}" %><br />
-</p>
+<div id="profile_user">
+  <h2 class="profileTitle"><%= @user.dispname %></h2>
+  <%= image_tag 'profile_pic.png' %>
+  <p class="profileText">
+    <span class="profileNote">Email:</span>
+    <%= @user.email %>
+  </p>
+  <p class="profileText">
+    <span class="profileNote">Full name:</span>
+    <%= "#{@user.firstname} #{@user.lastname}" %>
+  </p>
+</div>
+<div id="profile_posts">
+  <div>
+    <h2 class="profileTitle">Questions (<%= @user.questions.count %>)</h2>
+    <hr>
+    <% @user.questions.each do |que| %>
+      <p class="profileText">
+        <span class="profileVotes"><%= que.votes %></span>
+        <%= link_to add_dots(que.title, 70), que %>
+      </p>
+    <% end %>
+  </div>
+  <div>
+    <h2 class="profileTitle">Answers (<%= @user.answers.count %>)</h2>
+    <hr>
+    <% @user.answers.each do |ans| %>
+      <p class="profileText">
+        <span class="profileVotes"><%= ans.votes %></span>
+        <%= link_to add_dots(ans.content, 70), ans.question %>
+      </p>
+    <% end %>
+  </div>
+</div>

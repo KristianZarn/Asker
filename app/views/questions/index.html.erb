@@ -50,7 +50,7 @@
         </div>
         <div class="qQuestion">
           <%= link_to question.title, question, class: "qTitle" %>
-          <p class="qContent"><%= question.content[0..300] %>...</p>
+          <p class="qContent"><%= add_dots(question.content, 300) %></p>
           <p class="qAuthor">
             asked on <%= question.created_at.strftime("%d.%m.%Y") %> by
             <%= link_to question.user.dispname, question.user, class: "userLink" %>
