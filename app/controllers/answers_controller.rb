@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_filter :signed_in_user, only: [:create, :destroy, :pick_answer]
+  before_filter :signed_in_user, only: [:create, :destroy, :pick_answer, :vote]
 
   def create
     @question = Question.find(params[:question_id])
@@ -30,6 +30,29 @@ class AnswersController < ApplicationController
     else
       redirect_to root_path
     end
+  end
+
+  def vote
+    user = current_user
+    answer = Answer.find(params[:answer_id])
+
+    vote_string = "#{user.email}_answer_#{answer.id}"
+    vote_digest = Digest::MD5.hexdigest vote_string
+
+    # check if cookie exists => user already voted
+    if cookies[vote_digest].nil?
+      vote = params[:vote]
+      if vote == 'up'
+        answer.update_attributes(votes: (answer.votes+1))
+      elsif vote == 'down'
+        answer.update_attributes(votes: (answer.votes-1))
+      end
+
+      # set cookie for user vote
+      cookies.permanent[vote_digest] = 1
+    end
+
+    redirect_to answer.question
   end
 
   private

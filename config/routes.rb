@@ -10,6 +10,8 @@ AskerRuby::Application.routes.draw do
   delete '/signout', to: 'sessions#destroy'
 
   get '/pick/:answer_id', to: 'answers#pick_answer', as: 'pick'
+  get '/vote_answer/:answer_id/:vote', to: 'answers#vote', as: 'vote_answer'
+  get '/vote_question/:question_id/:vote', to: 'questions#vote', as: 'vote_question'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -24,9 +24,11 @@
 <p class="title"><%= @question.title %></p>
 <div class="questionFrame">
   <div class="votes">
-    <%= image_tag('arrow_up.png', class: "arrowImg") %>
+    <%= link_to image_tag('arrow_up.png', class: "arrowImg"),
+                vote_question_path(question_id: @question.id, vote: "up") %>
     <p><%= @question.votes %></p>
-    <%= image_tag('arrow_down.png', class: "arrowImg") %>
+    <%= link_to image_tag('arrow_down.png', class: "arrowImg"),
+                vote_question_path(question_id: @question.id, vote: "down") %>
   </div>
   <div class="frameContent">
     <div class="mainText">
@@ -50,9 +52,11 @@
 <% @answers.each do |answer| %>
   <div class="answerFrame">
     <div class="votes">
-      <%= image_tag('arrow_up.png', class: "arrowImg") %>
+      <%= link_to image_tag('arrow_up.png', class: "arrowImg"),
+                  vote_answer_path(answer_id: answer.id, vote: "up") %>
       <p><%= answer.votes %></p>
-      <%= image_tag('arrow_down.png', class: "arrowImg") %>
+      <%= link_to image_tag('arrow_down.png', class: "arrowImg"),
+                  vote_answer_path(answer_id: answer.id, vote: "down") %>
       <% if answer.selected %>
         <%= image_tag('ok_green.png', class: "pickAnswerImg") %>
       <% elsif current_user?(@question.user) %>
