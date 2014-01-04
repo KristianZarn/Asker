@@ -21,6 +21,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: appname_production
+  database: asker-ruby_production
   pool: 5
   timeout: 5000
