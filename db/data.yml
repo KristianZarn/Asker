@@ -1,0 +1,334 @@
+
+---
+users:
+  columns:
+  - id
+  - email
+  - dispname
+  - firstname
+  - lastname
+  - created_at
+  - updated_at
+  - password_digest
+  - remember_token
+  records: 
+  - - 1
+    - genericuser@gmail.com
+    - GeneTrick
+    - Generic
+    - User
+    - '2014-01-02 12:49:26.129208'
+    - '2014-01-02 12:49:26.129208'
+    - $2a$10$eJ9KQwYv5gIhcVYBBzDJv.OLAA2BmbbCAT1GvTauEXD1JweHNwfhG
+    - ajV5YgpOTIMuOjzep5t21Q
+  - - 2
+    - smartone@yahoo.com
+    - SmartOne
+    - Smart
+    - One
+    - '2014-01-02 12:49:26.333220'
+    - '2014-01-02 12:49:26.333220'
+    - $2a$10$tDoj7cv9lpWw7h0930NqJegn4RMHni2GLseUFpwMfWQwRSp7WwSuC
+    - 1POKY3qwIzfGxZuptc9SwQ
+  - - 3
+    - milivoje.novak@gmail.com
+    - pokemon
+    - Milivoje
+    - Novak
+    - '2014-01-02 12:49:26.437226'
+    - '2014-01-02 12:49:26.437226'
+    - $2a$10$.n89RPoLYyDaVRLAa9oGKOhMAi8ZuK6wMgXaFuBkNQLfSg/svXpzS
+    - w7vtjFYeB3gWrZbgx6uixg
+  - - 4
+    - miran93@hotmail.com
+    - batman
+    - Miran
+    - Turk
+    - '2014-01-02 12:49:26.543232'
+    - '2014-01-02 12:49:26.543232'
+    - $2a$10$v8Sn6uOIYK2UJTokoY1.V.E5lWojhZPG3o/gFhQ/Djbi.xhOLCBkm
+    - puF9DgrwKnD9vuEAUe6Mkg
+  - - 5
+    - kralj@yahoo.com
+    - Princess
+    - Roman
+    - Kralj
+    - '2014-01-02 12:49:26.646238'
+    - '2014-01-02 12:49:26.646238'
+    - $2a$10$bI4QnPrSdOt3kvnijDJFxeBrKcjWZoDwLGgvRc9O8jpGWP0fSxEFC
+    - Rcy2m3IsUiFv4wCOx7IYyg
+  - - 6
+    - denis.hribar2@fri.uni-lj.si
+    - geek4life
+    - Denis
+    - Hribar
+    - '2014-01-02 12:49:26.752244'
+    - '2014-01-02 12:49:26.752244'
+    - $2a$10$qhOqg51DovH50gqq0GOM1uwlFgf/9m4Tj0NLSOkt/j8QIX1ItpTfW
+    - j_Wvdy1kDIqxo7BgfR2aTg
+  - - 7
+    - slavko_car@gmail.com
+    - mrBean
+    - Slavko
+    - Pirc
+    - '2014-01-02 12:49:26.856250'
+    - '2014-01-02 12:49:26.856250'
+    - $2a$10$xwM9.ZjJVFWH1toj9xQn2uqhFACNGnZIS0N/.IKGZvCy/sbXMPFU2
+    - KgHqL8-Qq2527iT2Vh8KwQ
+  - - 8
+    - mirkosvemirko@gmail.com
+    - studentFri
+    - Mirko
+    - Golob
+    - '2014-01-02 12:49:26.961256'
+    - '2014-01-02 12:49:26.961256'
+    - $2a$10$xo/zC4Sqi6DjBnz2o.YaA.JbUgAsjvW539KMeu8nzxsDy8J0YSdWS
+    - 7Sp8xvt2y0oSTbMUz5G-Fg
+  - - 9
+    - miroslavz@hotmail.com
+    - Tipkovnica
+    - Miroslav
+    - Zorman
+    - '2014-01-02 12:49:27.064262'
+    - '2014-01-02 12:49:27.064262'
+    - $2a$10$3KxHydCkc.lUfLhWDLlImeFpmsQyEMJlhyQbEQaVInvyMhg08/kve
+    - wCgIREER4C_G8udGO2RFww
+  - - 10
+    - zorkozoran@hotmail.com
+    - poVodoGremoMi
+    - Zoran
+    - Humar
+    - '2014-01-02 12:49:27.165268'
+    - '2014-01-02 12:49:27.165268'
+    - $2a$10$AP16lpfNQP9Bu9xyTpV/dORggB12VpGpfLD7Wm7o/6yjPmHAznZ5q
+    - VSMTtSPJ_KT-fMh5ugX4Cg
+  - - 11
+    - danibor.mlinar@fri.uni-lj.si
+    - calculator
+    - Dani
+    - Mlinar
+    - '2014-01-02 12:49:27.270274'
+    - '2014-01-02 12:49:27.270274'
+    - $2a$10$NSDMIF8XJ/2pC2qW9Ou8VOeQlvfg/VdDd/yKciv15KSfL4jZcajiu
+    - wt2Eo4i8i4-BAiEdOz9LmQ
+  - - 12
+    - kaufman@gmail.com
+    - ManOnTheMoon
+    - Andy
+    - Kaufman
+    - '2014-01-02 12:49:27.373280'
+    - '2014-01-02 12:49:27.373280'
+    - $2a$10$a6/K8vjRdRWleOVL8RhXzOD7SnVKyjDx8HbMcKbBjTzGL/XgK4yoa
+    - bM_g_vXr_zQFRZU1VowYXw
+  - - 13
+    - novi.uporabnik@gmail.com
+    - noviUporabnik
+    - Klemen
+    - Klemenko
+    - '2014-01-02 12:49:27.476285'
+    - '2014-01-02 12:49:27.476285'
+    - $2a$10$Jb8Obq/R9dgm9Puv1jQwoOBgsIp/sF4MjAVRHjMaQgP/Wq4Mzbua6
+    - -O374Ddd8vF7jBETWwv3iA
+  - - 14
+    - kzarn@gmail.com
+    - KristianZarn
+    - Kristian
+    - Zarn
+    - '2014-01-03 13:15:32.550014'
+    - '2014-01-03 13:15:32.550014'
+    - $2a$10$h.rnBu3dplYe/UuFVs5.EuN.jFE8QVaez83ZfhziqX8Kru1RFSZ0i
+    - 8L-BrO2PiDJQwRqLt5tYoQ
+
+---
+questions:
+  columns:
+  - id
+  - title
+  - content
+  - votes
+  - user_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Question for testing
+    - "This is the body of the question. This is the placeholder for the body of the
+      question. The body of the question will be displayed here. Content of the question.
+      Here are some more details about the question.\r\nUser is searching for the
+      help of the other users on this site. People are happy with the design of this
+      website and I often hear them say: \"Wow, my eyes are pleased to see this website
+      again. I am sure going to visit it again. See you soon\". This is still a placeholder.
+      Repetative sentances are a bad placeholder. This paragraph is a little longer
+      than the first.\r\nI hope i did not make any grammatical mistakes in the first
+      two paragraphs. I am running out of ideas, so here is a quote from a movie:
+      \"The more scribbled the name, the bigger the fame.\" now i have enough text."
+    - 22
+    - 1
+    - '2014-01-03 09:46:36.115338'
+    - '2014-01-04 18:41:30.012214'
+  - - 2
+    - Answer to life and universe.
+    - I am writing an algorithm that would calculate the answer to life the universe
+      and everything. So far i have implemented the answer to life, but i have problems
+      with the implementation of everything. If there is anyone who has infinite amount
+      of time avalible, I would be very happy if you could lend me a hand.
+    - 24
+    - 12
+    - '2014-01-03 11:17:20.660748'
+    - '2014-01-03 11:56:06.614785'
+  - - 3
+    - Cant find the bug.
+    - There is a bug in my highly efficient and expert Javascript code. The value
+      of variable i on 100-th iteration is 99 and it should be 100. Please help!
+    - 8
+    - 5
+    - '2014-01-03 11:18:57.946312'
+    - '2014-01-03 11:56:36.151474'
+  - - 4
+    - Parallelization in CUDA.
+    - I wrote this algorithm to transpose a matrix and now i want to parallelize it
+      with CUDA. What would be the best place to start and do you think this is the
+      best approach. I like my algorithms to go fast. Text text text text.
+    - 10
+    - 6
+    - '2014-01-03 11:20:22.310138'
+    - '2014-01-03 11:57:06.452207'
+  - - 5
+    - First Question asked on site
+    - "Writing is a medium of communication that represents language through the inscription
+      of signs and symbols. In most languages, writing is a complement to speech or
+      spoken language. Within a language system, writing relies on many of the same
+      structures as speech, such as vocabulary, grammar and semantics, with the added
+      dependency of a system of signs or symbols, usually in the form of a formal
+      alphabet. The result of writing is generally called text, and the recipient
+      of text is called a reader. Motivations for writing include publication, storytelling,
+      correspondence and diary. Writing has been instrumental in keeping history,
+      dissemination of knowledge through the media and the formation of legal systems.
+      Under the influence of technologies such as data storage and computer networks,
+      the pace of correspondence and potential for collaboration increased.\r\nAs
+      human societies emerged, the development of writing was driven by pragmatic
+      exigencies such as exchanging information, maintaining financial accounts, codifying
+      laws and recording history. Around the 4th millennium BCE, the complexity of
+      trade and administration in Mesopotamia outgrew human memory, and writing became
+      a more dependable method of recording and presenting transactions in a permanent
+      form. In both Ancient Egypt and Mesoamerica writing may have evolved through
+      calendrics and a political necessity for recording historical and environmental
+      events."
+    - 5
+    - 3
+    - '2014-01-03 11:21:15.466178'
+    - '2014-01-03 11:57:51.189766'
+  - - 6
+    - Beginning HTML and CSS.
+    - I am starting to learn web desing and i was wondering if there are any good
+      resources on the internet. Im am looking for a good tutorial or a free online
+      book. I am also working on a homework, so if someone could do that for me that
+      would be great. Send it to me via e-mail, I need it in three days. G'bye.
+    - 12
+    - 3
+    - '2014-01-03 11:59:41.337066'
+    - '2014-01-03 12:01:38.764783'
+  - - 7
+    - Nature, in the broadest sense ?
+    - "Nature, in the broadest sense, is equivalent to the natural, physical, or material
+      world or universe. \"Nature\" refers to the phenomena of the physical world,
+      and also to life in general. It ranges in scale from the subatomic to the cosmic.\r\nThe
+      word nature is derived from the Latin word natura, or \"essential qualities,
+      innate disposition\", and in ancient times, literally meant \"birth\". Natura
+      was a Latin translation of the Greek word physis, which originally related to
+      the intrinsic characteristics that plants, animals, and other features of the
+      world develop of their own accord."
+    - 2
+    - 14
+    - '2014-01-03 13:16:52.437584'
+    - '2014-01-04 18:42:32.639793'
+
+---
+answers:
+  columns:
+  - id
+  - content
+  - votes
+  - selected
+  - user_id
+  - question_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - "I am answering this question becouse I know the antwort and i hope my answer
+      will help you solve your problem. I had the same problem just last week so the
+      solution to your problem is that you turn it off and on again.\r\nAnother way
+      to solve this thing would be to do an intermediate restart by pressing the power
+      and restart button togeter. This should solve your problem."
+    - 14
+    - false
+    - 2
+    - 1
+    - '2014-01-03 19:19:02.014893'
+    - '2014-01-04 18:41:32.215340'
+  - - 2
+    - "This answer probably doesn't have to do anything with the question of the original
+      poster, but i was hoping i could provide some additional information about the
+      topic we are talking about and that was the main reason that led me to post
+      this post under your post.\r\nDon't mind me, just another paragraph passing
+      through."
+    - 5
+    - true
+    - 3
+    - 1
+    - '2014-01-03 21:27:25.048481'
+    - '2014-01-04 13:19:42.250616'
+  - - 3
+    - Am I even answering the right question, cuz i'm not sure anymore.
+    - 2
+    - false
+    - 7
+    - 1
+    - '2014-01-03 21:29:28.136521'
+    - '2014-01-04 18:41:35.588533'
+  - - 4
+    - " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue posuere
+      tellus cursus accumsan quis a ante. Morbi massa libero, molestie eleifend venenatis
+      ac, fermentum mollis nulla. Ut at elementum lorem. \r\nSuspendisse potenti.
+      Suspendisse sit amet elit in odio ornare tempor. Etiam ipsum urna, gravida nec
+      metus vel, lobortis dapibus nulla. Quisque commodo non leo et imperdiet. Duis
+      ultricies nisi a pulvinar tincidunt."
+    - 8
+    - false
+    - 9
+    - 2
+    - '2014-01-03 21:32:12.069898'
+    - '2014-01-04 17:49:15.737288'
+  - - 5
+    - "Reading is an action performed by computers, to acquire data from a source
+      and place it into their volatile memory for processing. For example, a computer
+      may read information off a floppy disk and store it in random access memory
+      to be placed on the hard drive to be processed at a future date. Computers may
+      read information from a variety of sources, such as magnetic storage, the Internet,
+      or audio and video input ports.\r\nA read cycle is the act of reading one unit
+      of information (e.g. a byte). A read channel is an electrical circuit that transforms
+      the physical magnetic flux changes into abstract bits. A read error occurs when
+      the physical part of the process fails for some reason, such as dust or dirt
+      entering the drive."
+    - 3
+    - true
+    - 8
+    - 5
+    - '2014-01-03 21:33:50.393521'
+    - '2014-01-04 18:31:24.567777'
+  - - 6
+    - Technology is the making, modification or improvement, applied activity or behavior,
+      use and knowledge of tools, machines, techniques, crafts, systems, methods of
+      organization, or environmental modifications or arrangement in order to solve
+      a problem, improve a preexisting solution to a problem, achieve a goal or perform
+      a specific function. It can also refer to the collection of such tools, machinery,
+      modifications, environmental arrangement and procedures. Technologies significantly
+      affect human as well as other animal species' ability to control and adapt to
+      their natural environments.
+    - 1
+    - false
+    - 5
+    - 5
+    - '2014-01-03 21:34:35.312091'
+    - '2014-01-04 18:31:26.535890'

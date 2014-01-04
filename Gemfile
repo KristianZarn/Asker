@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'bcrypt-ruby'
 gem 'will_paginate'
+gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
